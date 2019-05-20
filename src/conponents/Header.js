@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Header extends React.Component{
     constructor(props) {
@@ -39,6 +40,14 @@ class Header extends React.Component{
             </div>
         )
     }
+}
+
+Header.defaultProps = {
+    msg: '默认子组件msg'
+}
+
+Header.propTypes = {
+    msg: PropTypes.string
 }
 
 export default Header;
