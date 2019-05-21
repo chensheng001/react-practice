@@ -16,3 +16,6 @@ code {
 .red{
   color: red;
 }
+.Nav a {
+  padding: 0 20px;
+}

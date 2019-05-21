@@ -25,7 +25,7 @@ class FetchJsonp extends Component{
     render() {
         return (
             <div>
-                <h2>测试Axios</h2>
+                <h2>测试fetch-jsonp</h2>
                 <hr/>
                 <button onClick={this.getData}>点击使用fetch-jsonp发送请求</button>
 
