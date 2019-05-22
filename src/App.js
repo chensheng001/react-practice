@@ -9,6 +9,9 @@ import Axios from "./conponents/Axios";
 import FetchJsonp from "./conponents/FetchJsonp";
 import Lifecycle from "./conponents/Lifecycle";
 import MyRouter from "./conponents/MyRouter";
+import MHome from "./conponents/nobodyMeal/Home"
+import ProductDetail from "./conponents/nobodyMeal/ProductDetail";
+import {BrowserRouter as Router, Route,Link} from 'react-router-dom'
 // import './assets/css/App.css';
 
 class App extends React.Component{
@@ -44,9 +47,14 @@ class App extends React.Component{
                 {this.state.isShow ? <Lifecycle app={this}/> : ''}
             </div>
             * */
-            <div>
-                <MyRouter/>
-            </div>
+            <Router>
+                <div>
+
+                    <Route exact path='/' component={MHome} />
+                    <Route path='/detail' component={ProductDetail} />
+                </div>
+
+            </Router>
         )
     }
 }
