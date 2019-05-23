@@ -1,0 +1,22 @@
+{
+  "result": [
+    {
+      "_id": "5ac2e79b127ca21160ffe32a",
+      "shop_id": 0,
+      "cate_id": "5ac089e4a880f20358495509",
+      "catename": "特色菜",
+      "title": "拍黄瓜",
+      "price": "1",
+      "product_bar_code": "6934502300709",
+      "num": "100",
+      "description": "规格:250ml/瓶",
+      "status": "1",
+      "is_best": "1",
+      "is_hot": "1",
+      "content": "<p><span style=\"font-family: &quot;Microsoft YaHei&quot;; font-size: medium;\">拍黄瓜真好吃啊</span></p>",
+      "img_url": "1.jpg",
+      "type": "1",
+      "sort": ""
+    }
+  ]
+}

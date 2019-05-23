@@ -32,6 +32,9 @@ class Home extends React.Component{
         return (
             <div className='main'>
                 <h2>无人点餐系统</h2>
+                <button>
+                    <Link to='/login'>登录</Link>
+                </button>
 
                 {
                     this.state.list.map((value,key) => {

@@ -12,6 +12,7 @@ import MyRouter from "./conponents/MyRouter";
 import MHome from "./conponents/nobodyMeal/Home"
 import ProductDetail from "./conponents/nobodyMeal/ProductDetail";
 import {BrowserRouter as Router, Route,Link} from 'react-router-dom'
+import Login from "./conponents/nobodyMeal/Login";
 // import './assets/css/App.css';
 
 class App extends React.Component{
@@ -51,7 +52,8 @@ class App extends React.Component{
                 <div>
 
                     <Route exact path='/' component={MHome} />
-                    <Route path='/detail' component={ProductDetail} />
+                    <Route path='/login' component={Login} />
+                    <Route path='/detail/:id' component={ProductDetail} />
                 </div>
 
             </Router>
