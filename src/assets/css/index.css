@@ -19,3 +19,15 @@ code {
 .Nav a {
   padding: 0 20px;
 }
+.userMain{
+  display: flex;
+}
+.userMain .left{
+  width: 200px;
+  height: 500px;
+}
+.userMain .right{
+  flex: 1;
+  height: 500px;
+  border: 1px solid red;
+}

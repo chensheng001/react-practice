@@ -13,6 +13,10 @@ import MHome from "./conponents/nobodyMeal/Home"
 import ProductDetail from "./conponents/nobodyMeal/ProductDetail";
 import {BrowserRouter as Router, Route,Link} from 'react-router-dom'
 import Login from "./conponents/nobodyMeal/Login";
+import Main from "./conponents/user/Main";
+import RHome from './conponents/home/Home'
+import './assets/css/index.css'
+import User from "./conponents/user/User";
 // import './assets/css/App.css';
 
 class App extends React.Component{
@@ -38,6 +42,7 @@ class App extends React.Component{
 
     render() {
         return (
+
             /*
             * <div className="App">
                 <button onClick={this.setShow}>{this.state.isShow ? '销毁子组件' : '加载子组件'}</button>
@@ -48,15 +53,30 @@ class App extends React.Component{
                 {this.state.isShow ? <Lifecycle app={this}/> : ''}
             </div>
             * */
+
             <Router>
                 <div>
+                    {/*
+                        <Route exact path='/' component={MHome} />
+                        <Route path='/login' component={Login} />
+                        <Route path='/detail/:id' component={ProductDetail} />
+                    */}
 
-                    <Route exact path='/' component={MHome} />
-                    <Route path='/login' component={Login} />
-                    <Route path='/detail/:id' component={ProductDetail} />
+
+                    <div className="Nav">
+                        <Link to="/">首页</Link>
+                        <Link to="/user">user</Link>
+                    </div>
+
+
+                    <Route exact path='/' component={RHome}/>
+                    <Route path='/user' component={User}/>
                 </div>
 
             </Router>
+
+
+
         )
     }
 }
