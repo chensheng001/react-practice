@@ -17,6 +17,7 @@ import Main from "./conponents/user/Main";
 import RHome from './conponents/home/Home'
 import './assets/css/index.css'
 import User from "./conponents/user/User";
+import routes from "./conponents/model/routes"
 // import './assets/css/App.css';
 
 class App extends React.Component{
@@ -66,11 +67,26 @@ class App extends React.Component{
                     <div className="Nav">
                         <Link to="/">首页</Link>
                         <Link to="/user">user</Link>
+                        <Link to="/news">新闻</Link>
                     </div>
 
-
-                    <Route exact path='/' component={RHome}/>
-                    <Route path='/user' component={User}/>
+                    {
+                        routes.map((value,key) => {
+                            if (value.exact) {
+                                return <Route key={key} exact path={value.path}
+                                  render={props => (
+                                      <value.component {...props} routes={value.routes} />
+                                  )}
+                                />
+                            }else {
+                                return <Route key={key} path={value.path}
+                                  render={props => (
+                                      <value.component {...props} routes={value.routes} />
+                                  )}
+                                />
+                            }
+                        })
+                    }
                 </div>
 
             </Router>
