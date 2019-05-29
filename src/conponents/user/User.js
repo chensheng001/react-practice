@@ -32,9 +32,9 @@ class User extends React.Component{
                     <div className="right">
 
                         {
-                            this.props.routes.map((value,key) => {
+                            /*this.props.routes.map((value,key) => {
                                return value.exact ? <Route key={key} exact path={value.path} component={value.component} /> : <Route key={key} path={value.path} component={value.component} />
-                            })
+                            })*/
                         }
                     </div>
                 </div>
